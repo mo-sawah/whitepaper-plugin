@@ -1,0 +1,191 @@
+/*
+ * Styles for the Whitepaper Download Box
+ */
+:root {
+    --whp-bg-color: #002d56;
+    --whp-text-color: #ffffff;
+    --whp-button-color: #0073e6;
+    --whp-button-text-color: #ffffff;
+    --whp-link-color: #a9d4ff;
+}
+
+.whp-download-box {
+    background-color: var(--whp-bg-color);
+    color: var(--whp-text-color);
+    padding: 30px;
+    border-radius: 8px;
+    font-family: sans-serif;
+}
+
+.whp-download-box .whp-box-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.whp-download-box .whp-box-header h3 {
+    color: var(--whp-text-color);
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.whp-download-box .whp-required-text {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.whp-download-box .whp-email-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.whp-download-box .whp-email-form input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.whp-download-box .whp-email-form button {
+    background-color: var(--whp-button-color);
+    color: var(--whp-button-text-color);
+    border: none;
+    padding: 0px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whp-download-box .whp-email-form button:hover {
+    filter: brightness(90%);
+}
+
+/* Checkbox and Disclaimer Styles */
+.whp-checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.whp-checkbox-container input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.whp-checkbox-container label {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d1d1d1;
+    cursor: pointer;
+}
+
+.whp-checkbox-container label a,
+.whp-download-box .whp-disclaimer a {
+    color: var(--whp-link-color);
+    text-decoration: underline;
+}
+
+.whp-checkbox-container label a:hover,
+.whp-download-box .whp-disclaimer a:hover {
+    text-decoration: none;
+}
+
+.whp-download-box .whp-disclaimer {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #d1d1d1;
+}
+
+/* Loader Styles */
+.whp-loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--whp-button-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: whp-spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes whp-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Result / Download Button Styles */
+.whp-result .whp-download-btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.whp-result .whp-download-btn:hover {
+    background-color: #218838;
+}
+
+.whp-result p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/*
+ * Styles for content rendered by the [whitepaper_content] shortcode
+ */
+.whp-formatted-content {
+    line-height: 1.6;
+    color: #333;
+}
+.whp-formatted-content h1, .whp-formatted-content h2, .whp-formatted-content h3, .whp-formatted-content h4, .whp-formatted-content h5, .whp-formatted-content h6 {
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+}
+.whp-formatted-content ul {
+    list-style-type: disc !important;
+    margin-left: 25px !important;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+}
+.whp-formatted-content ul li {
+    margin-bottom: 0.6em;
+}
+.whp-formatted-content ol {
+    list-style-type: decimal !important;
+    margin-left: 25px !important;
+    margin-bottom: 1.5em;
+    padding-left: 0;
+}
+.whp-formatted-content ol li {
+    margin-bottom: 0.6em;
+}
+.whp-formatted-content p {
+    margin-bottom: 1.2em;
+}
+
+/*
+ * Styles for the Elementor Post Info Widget (Topics/Tags)
+ */
+.elementor-widget-post-info .elementor-post-info {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
